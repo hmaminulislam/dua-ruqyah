@@ -3,7 +3,8 @@ import SearchIcon from "../../assets/images/serach-icon.svg";
 import Image from 'next/image';
 import DuaCardItem from '../sub/DuaCardItem';
 
-function MiddleContent() {
+function MiddleContent({ data }) {
+  const { dua } = data;
   return (
     <div className="w-[1015px]">
       <div className="flex items-center relative"></div>
@@ -30,8 +31,9 @@ function MiddleContent() {
         </div>
         <div>
           <div className="flex flex-col gap-5">
-            <DuaCardItem />
-            <DuaCardItem />
+            {dua.map((item, index) => (
+              <DuaCardItem key={index} duaItem={item} index={index} />
+            ))}
           </div>
         </div>
       </div>

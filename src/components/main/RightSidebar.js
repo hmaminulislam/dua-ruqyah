@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import React from 'react'
 import ProfileIcon from '../../assets/images/profile.svg'
 import DropIcon from '../../assets/images/drop.svg'
 import LanguageIcon from '../../assets/images/language.svg'
